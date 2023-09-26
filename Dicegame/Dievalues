@@ -1,0 +1,29 @@
+public class Dievalue{
+
+
+private int Dice_1
+private int Dice_2
+
+private int Dice_1value , Dice_2value, sum;
+
+public Dievalue() {
+    Dice_1 = new Dice();
+    Dice_2 = new Dice();
+
+}
+}
+
+public void rollDice(){
+    Dice_1value = Dice_1.roll();
+    Dice_2value = Dice_2.roll();
+}
+
+public int sumFace(){
+    sum = Dice_1value + Dice_2value;
+    return sum;
+
+}
+
+public int getSum(){
+    return sum;
+}

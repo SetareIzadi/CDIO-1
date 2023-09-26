@@ -5,7 +5,7 @@ public class Main{
 public static void main(String[] args) {
 
 
-
+final Dicevalues = 
 
 
 while(player.1.getScore()<40 && player.2.getScore<40){
