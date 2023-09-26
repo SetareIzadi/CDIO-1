@@ -29,5 +29,6 @@ public class DiceRoll {
         System.out.println("Dice_2: " + roll.getDice_2());
         
     }
-}
+    }
+
 
