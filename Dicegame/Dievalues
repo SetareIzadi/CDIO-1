@@ -1,6 +1,5 @@
 public class Dievalue{
 
-
 private int Dice_1
 private int Dice_2
 
