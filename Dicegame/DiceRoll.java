@@ -1,3 +1,4 @@
+package Dicegame;
 import java.util.Random;
 public class DiceRoll {
 
