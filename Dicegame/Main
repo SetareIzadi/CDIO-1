@@ -1,0 +1,26 @@
+package Dicegame;
+
+public class Main{
+
+public static void main(String[] args) {
+
+
+
+
+
+while(player.1.getScore()<40 && player.2.getScore<40){
+
+// Player 1 loop first
+System.out.println("__________________");
+System.out.println("Player 1 goes first");
+//Kode til at kaste med terninger
+
+
+
+
+
+
+// player 2 loop second
+}
+}
+}
