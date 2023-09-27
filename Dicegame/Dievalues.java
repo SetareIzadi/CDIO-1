@@ -44,7 +44,7 @@ return(Dice_1 == 1 && Dice_2==1);
 }
 
 public boolean checkForTwoSix(){
-    return(Dice_1==Dice_2 && Dice_1==6);
+    return(Dice_1 == 6 && Dice_1 == 6);
 }
 }
 
