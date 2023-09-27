@@ -1,9 +1,9 @@
 package Dicegame;
 public class Player {
 
+    public int score;
 public Player() {
-} public int score;   
-
+}    
 
 public void sumScore(final int sum){
     score+=sum;
@@ -26,9 +26,8 @@ public String toStringWinner(final String player){
 return "Congratulations "+ player + " You won!";
 }
 
-public String toStringExtra(){
-return "You rolled two of the same dice. You get an extra turn!";
-}
+
+
 
 
 public String toStringTwoOnes(){

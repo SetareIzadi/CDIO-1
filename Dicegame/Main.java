@@ -4,22 +4,55 @@ public class Main{
 
 public static void main(String[] args) {
 
-while(Player1.getScore()<40 && Player2.getScore <40){
+final Player player1 = new Player();
+final Player player2 = new Player();
+final Dievalues roll = new Dievalues();
+
+while(player1.getScore()<40 && player2.getScore()<40){
 
     // Player 1 loop first
     System.out.println("__________________");
-    System.out.println("Player 1 goes first");
+    System.out.println("Player 1's turn");
+    roll.Dievalues();
+    System.out.println(roll.toStringValueOfDies());
 
-    if(roll.checkIfEqual()){
-    roll.scoreFace();
-    Player1.sumScore(roll.getScore());
-    System.out.println(player1.toStringScore());
+ if(!roll.checkForDouble()){
+    roll.sumFace();
+    player1.sumScore(roll.getSum());
+    System.out.println(player1.toStringTotalScore());
 
-    } else {
-    (roll.checkIfDoubleone()){
-    System.out.println(player1.toStringTwoOnes);
-    player1.startOver(true);
-    System.out.println(player1.toStringScore());
+ } else{
+ } 
+    if(roll.checkIfDoubleone()){
+            System.out.println("Too bad you rolled two ones and have to start over :( )");
+            player1.startOver(true);    
+            System.out.println(player1.toStringTotalScore());
+
+} else{
+
+    while(roll.checkForDouble()){ //mulig fejl her
+        roll.sumFace();
+        player1.sumScore(roll.getSum());
+        System.out.println("You rolled two of a kind!, you get an extra turn!");
+        System.out.println(player1.toStringTotalScore());
+        
+        if(roll.checkForNotSixOne()){
+            continue;
+        }
+
+    }
+} 
+
+
+
+    }
+}
+
+ }
+    
+     
+
+    
 
 }
 }
@@ -31,6 +64,4 @@ while(Player1.getScore()<40 && Player2.getScore <40){
 
 
 // player 2 loop second
-}
-}
-}
+
