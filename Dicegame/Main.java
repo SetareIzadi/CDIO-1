@@ -4,11 +4,7 @@ public class Main{
 
 public static void main(String[] args) {
 
-
-fin
-
-
-while(Player1.getScore()<40 && Player2.getScore<40){
+while(Player1.getScore()<40 && Player2.getScore <40){
 
     // Player 1 loop first
     System.out.println("__________________");
