@@ -4,15 +4,14 @@ public class Dievalues{
 
 public int Dice_1;
 public int Dice_2;
-public int Dievalue;
 public int sum;
 
 public int Dievalue() {
     Dice_1 = new Die().roll();
     Dice_2 = new Die().roll();
 
-    return Dice_1 + Dice_2;
-    
+   return sum;
+
 }
 
 public int sumFace(){
@@ -24,7 +23,6 @@ public int sumFace(){
 public int getSum(){
     return sum;
 }
-
 
 public String toStringValueOfDies(){
 
