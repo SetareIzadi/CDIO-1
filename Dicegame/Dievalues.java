@@ -4,9 +4,10 @@ public class Dievalues{
 
 public int Dice_1;
 public int Dice_2;
+public int Dievalue;
 public int sum;
 
-public int Dievalues() {
+public int Dievalue() {
     Dice_1 = new Die().roll();
     Dice_2 = new Die().roll();
 
@@ -44,7 +45,7 @@ return(Dice_1 == 1 && Dice_2 == 1);
 }
 
 public boolean checkForTwoSix(){
-    return(Dice_1 == 6 && Dice_1 == 6);
+    return(Dice_1 == 6 && Dice_2 == 6);
 
 }
 
