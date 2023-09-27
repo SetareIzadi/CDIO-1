@@ -32,20 +32,23 @@ public String toStringValueOfDies(){
 
 
 public boolean checkForDouble(){
-    return(Dice_1==Dice_2);
+    return(Dice_1 == Dice_2);
 }
 public boolean checkIfDoubleone(){
-return(Dice_1 == 1 && Dice_2==1);
+return(Dice_1 == 1 && Dice_2 == 1);
 
 
 }public boolean checkForNotSixOne(){
-    return(Dice_1 == Dice_2 && Dice_1!=1 && Dice_1!=6);
+    return(Dice_1 == Dice_2 && Dice_1 != 1 && Dice_1 != 6);
 
 }
 
 public boolean checkForTwoSix(){
-    return(Dice_1==Dice_2 && Dice_1==6);
+    return(Dice_1 == 6 && Dice_1 == 6);
+
 }
+
+
 }
 
 
