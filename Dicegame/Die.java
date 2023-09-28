@@ -1,4 +1,5 @@
 package Dicegame;
+
 import java.util.Random;
 
 public class Die {
@@ -11,10 +12,10 @@ public class Die {
 
     public int roll() {
         faceValue = random.nextInt(6) + 1;
-
         return faceValue;
     }
 }
+
 
 
 
