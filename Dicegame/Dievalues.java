@@ -37,7 +37,7 @@ public class Dievalues {
     }
 
     public boolean checkForTwoSix() {
-        return (Dice_1 == 6 && Dice_2 == 6);
+        return (Dice_1 == Dice_2 && Dice_1 == 6);
     }
 }
 
