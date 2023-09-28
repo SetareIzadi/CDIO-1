@@ -6,7 +6,7 @@ public class Main {
 
         final Player player1 = new Player();
         final Player player2 = new Player();
-        final Dievalues roll = new Dievalues();
+        Dievalues roll = new Dievalues();
 
         while (player1.getScore() < 40 && player2.getScore() < 40) {
             // Player 1's turn
