@@ -8,7 +8,8 @@ public class Dievalues {
     public int Dievalue() {
         Dice_1 = new Die().roll();
         Dice_2 = new Die().roll();
-        return sum;
+
+        return Dice_1 + Dice_2;
     }
 
     public int sumFace() {
