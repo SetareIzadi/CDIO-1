@@ -3,11 +3,8 @@ package Dicegame;
 public class Player {
 
     public int score;
-    public String name;
 
-    public Player(String playerName) {
-        name = playerName;
-
+    public Player() {
     }
 
     public void sumScore(final int sum) {
@@ -36,6 +33,3 @@ public class Player {
         return "You rolled two ones. You lose your points and your turn";
     }
 }
-
-
-

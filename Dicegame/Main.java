@@ -4,10 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        final Player player1 = new Player("player1");
-        final Player player2 = new Player("player2");
-        Dievalues roll = new Dievalues(-1);
-    
+        final Player player1 = new Player();
+        final Player player2 = new Player();
+        Dievalues roll = new Dievalues();
 
         while (player1.getScore() < 40 && player2.getScore() < 40) {
             // Player 1's turn
@@ -33,7 +32,7 @@ public class Main {
     }
 
     public static void playTurn(Player player, Dievalues roll) {
-        roll.roll();
+        roll.Dievalue();
         System.out.println(roll.toStringValueOfDies());
 
         // Handle the roll
@@ -54,7 +53,7 @@ public class Main {
                     System.out.println(player.toStringTotalScore());
                     System.out.println("You rolled two of a kind!, you get an extra turn!");
 
-                    roll.roll(); // Roll the dice for the extra turn
+                    roll.Dievalue(); // Roll the dice for the extra turn
                     System.out.println(roll.toStringValueOfDies());
 
                     if (roll.checkForNotSixOne()) {
@@ -65,9 +64,7 @@ public class Main {
                         System.out.println(player.toStringTotalScore());
                         break;
                     } else if (roll.checkForTwoSix()) {
-                        System.out.println("You rolled double 6, the winner is " + player.name);
                         player.sumScore(40);
-
                         break;
                     } else {
                         roll.sumFace();
