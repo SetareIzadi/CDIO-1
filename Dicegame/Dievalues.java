@@ -4,10 +4,30 @@ public class Dievalues {
     public Die Dice_1;
     public Die Dice_2;
     public int sum;
+    public int n;
+    public Dievalues(int n){
+        this.n=n;
+        Dice_1= new Die();
+        Dice_2= new Die();
+    }
 
-    public int Dievalue() {
-        Dice_1 = new Die().roll();
-        Dice_2 = new Die().roll();
+    public void roll() {
+        if(n==-1){
+
+
+        Dice_1.roll();
+        Dice_2.roll();
+        } 
+        else{
+            Dice_1.faceValue =n;
+            Dice_2.faceValue =n;
+        }
+    }
+
+    public int sumFace() { if(n==-1){
+
+
+        sum = Dice_1.faceValue + Dice_2.faceValue;
         return sum;
     }
     else {
@@ -40,7 +60,6 @@ public class Dievalues {
         return (Dice_1.faceValue == Dice_2.faceValue && Dice_1.faceValue == 6);
     }
 }
-
 
 
 
