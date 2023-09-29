@@ -3,21 +3,21 @@ package Dicegame;
 public class Test {
 
     public static void main(String[] args) {
-        int[] sumCount = new int[11]; // To count the occurrences of each sum
+        int[] sumCount = new int[11]; // Count how many each outcome occurs
 
-        final int numberOfThrows = 1000; // Number of dice throws for the test
+        final int numberOfThrows = 1000; // times the dices are thrown
 
         for (int i = 0; i < numberOfThrows; i++) {
             Dievalues roll = new Dievalues();
             int rollSum = roll.Dievalue();
 
-            // Check if the sum is within the valid range (2 to 12)
+            // Check if the sum is within the range (2 to 12)
             if (rollSum >= 2 && rollSum <= 12) {
                 sumCount[rollSum - 2]++;
             }
         }
 
-        // Print the results and counts
+        // Print the results
         for (int i = 2; i <= 12; i++) {
             double theoreticalProbability = getTheoreticalProbability(i);
             double experimentalProbability = (double) sumCount[i - 2] / numberOfThrows;
@@ -28,14 +28,14 @@ public class Test {
         }
     }
 
-    // Calculate the theoretical probability of getting a specific sum with two 6-sided dice
+    // Calculate the theoretical probability
     public static double getTheoreticalProbability(int sum) {
         if (sum < 2 || sum > 12) {
             return 0.0; // Invalid sum
         }
 
         int favorableOutcomes = 0;
-        int totalOutcomes = 36; // Total number of outcomes with two 6-sided dice
+        int totalOutcomes = 36; 
 
         // Count the number of favorable outcomes for the given sum
         for (int die1 = 1; die1 <= 6; die1++) {
