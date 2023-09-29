@@ -1,36 +1,20 @@
 package Dicegame;
 
-public class Main {
+public class Test_roll_2_six {
 
     public static void main(String[] args) {
 
-        final Player player1 = new Player("player1");
-        final Player player2 = new Player("player2");
-        Dievalues roll = new Dievalues(-1);
-    
+        final Player player1 = new Player();
+        final Player player2 = new Player();
+        Dievalues roll = new Dievalues(6);
 
         while (player1.getScore() < 40 && player2.getScore() < 40) {
             // Player 1's turn
             System.out.println("__________________");
             System.out.println("Player 1's turn");
-            playTurn(player1, roll);
+            playTurn(player1, roll); }
 
-            if (player1.getScore() >= 40) {
-                System.out.println("Congratulations, Player 1 won the Dice game with: " + player1.toStringTotalScore());
-                break;
-            }
-
-            // Player 2's turn
-            System.out.println("__________________");
-            System.out.println("Player 2's turn");
-            playTurn(player2, roll);
-
-            if (player2.getScore() >= 40) {
-                System.out.println("Congratulations, Player 2 won the Dice game with: " + player2.toStringTotalScore());
-                break;
-            }
         }
-    }
 
     public static void playTurn(Player player, Dievalues roll) {
         roll.roll();
@@ -54,7 +38,7 @@ public class Main {
                     System.out.println(player.toStringTotalScore());
                     System.out.println("You rolled two of a kind!, you get an extra turn!");
 
-                    roll.roll(); // Roll the dice for the extra turn
+                    roll.Dievalue(); // Roll the dice for the extra turn
                     System.out.println(roll.toStringValueOfDies());
 
                     if (roll.checkForNotSixOne()) {
@@ -65,9 +49,7 @@ public class Main {
                         System.out.println(player.toStringTotalScore());
                         break;
                     } else if (roll.checkForTwoSix()) {
-                        System.out.println("You rolled double 6, the winner is " + player.name);
-                        player.sumScore(40);
-
+                        System.out.println("You rolled double 6, the winner is " + player);
                         break;
                     } else {
                         roll.sumFace();

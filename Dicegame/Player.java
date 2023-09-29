@@ -3,8 +3,11 @@ package Dicegame;
 public class Player {
 
     public int score;
+    public String name;
 
-    public Player() {
+    public Player(String playerName) {
+        name = playerName;
+
     }
 
     public void sumScore(final int sum) {

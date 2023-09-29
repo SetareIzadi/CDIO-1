@@ -1,19 +1,39 @@
 package Dicegame;
 
 public class Dievalues {
-    public int Dice_1;
-    public int Dice_2;
+    public Die Dice_1;
+    public Die Dice_2;
     public int sum;
-
-    public int Dievalue() {
-        Dice_1 = new Die().roll();
-        Dice_2 = new Die().roll();
-        return sum;
+    public int n;
+    public Dievalues(int n){
+        this.n=n;
+        Dice_1= new Die();
+        Dice_2= new Die();
     }
 
-    public int sumFace() {
-        sum = Dice_1 + Dice_2;
+    public void roll() {
+        if(n==-1){
+
+        
+        Dice_1.roll();
+        Dice_2.roll();
+        } 
+        else{
+            Dice_1.faceValue =n;
+            Dice_2.faceValue =n;
+        }
+    }
+
+    public int sumFace() { if(n==-1){
+
+    
+        sum = Dice_1.faceValue + Dice_2.faceValue;
         return sum;
+    }
+    else {
+        sum= n+n;
+    return sum;
+    }
     }
 
     public int getSum() {
@@ -21,23 +41,23 @@ public class Dievalues {
     }
 
     public String toStringValueOfDies() {
-        return "First roll is " + Dice_1 + " Second roll is " + Dice_2;
+        return "First roll is " + Dice_1.faceValue + " Second roll is " + Dice_2.faceValue;
     }
 
     public boolean checkForDouble() {
-        return (Dice_1 == Dice_2);
+        return (Dice_1.faceValue == Dice_2.faceValue);
     }
 
     public boolean checkIfDoubleone() {
-        return (Dice_1 == 1 && Dice_2 == 1);
+        return (Dice_1.faceValue == 1 && Dice_2.faceValue == 1);
     }
 
     public boolean checkForNotSixOne() {
-        return (Dice_1 == Dice_2 && Dice_1 != 1 && Dice_1 != 6);
+        return (Dice_1.faceValue == Dice_2.faceValue && Dice_1.faceValue != 1 && Dice_1.faceValue != 6);
     }
 
     public boolean checkForTwoSix() {
-        return (Dice_1 == Dice_2 && Dice_1 == 6);
+        return (Dice_1.faceValue == Dice_2.faceValue && Dice_1.faceValue == 6);
     }
 }
 
